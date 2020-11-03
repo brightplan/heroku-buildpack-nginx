@@ -19,6 +19,7 @@ fetch_nginx_tarball() {
     if [ -f "$dest_path" ]; then
         echo -n "cat $dest_path"
     else
+        echo "-----> Fetching nginx ${version} binaries at ${nginx_tarball_url}"
         echo -n "curl -L $nginx_tarball_url"
     fi
 }
